@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SugarSync - Revolutionary Blood Sugar Solution</title>
+    <meta name="description" content="Discover the natural method ignored by Big Pharma that attacks the root cause of uncontrolled blood sugar in just 14 days.">
+    <link rel="canonical" href="https://sugarsync.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            background: #1a1a2e;
+        }
+
+        /* Dynamic Responsive Background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff6b6b 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: -3;
+        }
+
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(103, 126, 234, 0.2) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+            z-index: -2;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating shapes */
+        .bg-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: floatShape 20s linear infinite;
+        }
+
+        .shape.circle {
+            border-radius: 50%;
+            background: linear-gradient(45deg, #fff, rgba(255,255,255,0.5));
+        }
+
+        .shape.triangle {
+            width: 0;
+            height: 0;
+            background: none;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 25px solid rgba(255,255,255,0.15);
+        }
+
+        .shape.square {
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            transform: rotate(45deg);
+        }
+
+        @keyframes floatShape {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.1; }
+            90% { opacity: 0.1; }
+            100% {
+                transform: translateY(-100px) translateX(50px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px 15px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Typography */
+        .headline {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            margin-bottom: 16px;
+            line-height: 1.2;
+            animation: slideInUp 0.8s ease-out;
+            padding: 0 10px;
+        }
+
+        .headline .highlight {
+            color: #ffeb3b;
+            text-shadow: 2px 2px 8px rgba(255,235,59,0.4);
+            background: linear-gradient(45deg, #ffeb3b, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subheadline {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 24px;
+            line-height: 1.5;
+            animation: slideInUp 0.8s ease-out 0.2s both;
+            padding: 0 10px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* VSL Container */
+        .vsl-container {
+            position: relative;
+            margin: 24px auto;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            animation: slideInUp 0.8s ease-out 0.4s both;
+            background: #000;
+            border: 2px solid rgba(255,235,59,0.3);
+        }
+
+        .vsl-video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(45deg, #0f0f0f, #2a2a2a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        /* Play Button */
+        .play-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #ffeb3b, #ffc107);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: pulseGlow 3s infinite;
+            box-shadow: 0 0 0 0 rgba(255, 235, 59, 0.7);
+            position: relative;
+            z-index: 2;
+        }
+
+        .play-button::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ffeb3b, #ffc107, #ff9800);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.7;
+            animation: spinGlow 4s linear infinite;
+        }
+
+        .play-button:hover {
+            transform: scale(1.2);
+            background: linear-gradient(45deg, #ffc107, #ff9800);
+        }
+
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 16px solid #333;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 3px;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 235, 59, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 235, 59, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 235, 59, 0); }
+        }
+
+        @keyframes spinGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .video-overlay {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Urgency Timer */
+        .urgency-timer {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 20px auto;
+            display: inline-block;
+            animation: slideInUp 0.8s ease-out 0.6s both;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+            border: 2px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+        }
+
+        .timer-digits {
+            font-size: 1.1rem;
+            color: #ffeb3b;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-weight: 900;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 18px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 24px auto 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
+            animation: slideInUp 0.8s ease-out 0.8s both;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            border: 2px solid rgba(255,255,255,0.2);
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 35px rgba(255, 107, 53, 0.6);
+        }
+
+        .cta-subtext {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 12px;
+            animation: slideInUp 0.8s ease-out 1s both;
+            line-height: 1.4;
+        }
+
+        /* Purchase Notifications */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transform: translateY(100px);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.3);
+            opacity: 0;
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .notification-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4caf50, #8bc34a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+        }
+
+        .notification-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .notification-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 0.85rem;
+            margin-bottom: 2px;
+        }
+
+        .notification-action {
+            color: #666;
+            font-size: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .notification-time {
+            color: #4caf50;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 24px;
+            animation: slideInUp 0.8s ease-out 1.2s both;
+            padding: 0 10px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .trust-icon {
+            width: 16px;
+            height: 16px;
+            background: #4caf50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            flex-shrink: 0;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                padding: 30px 40px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .headline {
+                font-size: 2.4rem;
+            }
+
+            .subheadline {
+                font-size: 1.2rem;
+                max-width: 100%;
+            }
+
+            .vsl-container {
+                max-width: 600px;
+                margin: 40px auto;
+            }
+
+            .play-button {
+                width: 70px;
+                height: 70px;
+            }
+
+            .cta-button {
+                font-size: 1.2rem;
+                padding: 20px 40px;
+                max-width: 400px;
+            }
+
+            .trust-badges {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+
+            .notification {
+                left: 30px;
+                right: auto;
+                max-width: 320px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 900px;
+                padding: 40px 50px;
+            }
+
+            .headline {
+                font-size: 3.2rem;
+                margin-bottom: 24px;
+            }
+
+            .subheadline {
+                font-size: 1.3rem;
+                margin-bottom: 40px;
+            }
+
+            .vsl-container {
+                max-width: 720px;
+                margin: 50px auto;
+                border-radius: 20px;
+            }
+
+            .play-button {
+                width: 80px;
+                height: 80px;
+            }
+
+            .play-button::after {
+                border-left: 20px solid #333;
+                border-top: 12px solid transparent;
+                border-bottom: 12px solid transparent;
+                margin-left: 4px;
+            }
+
+            .cta-button {
+                font-size: 1.3rem;
+                padding: 22px 50px;
+                max-width: 500px;
+            }
+
+            .urgency-timer {
+                font-size: 1rem;
+                padding: 16px 30px;
+            }
+
+            .timer-digits {
+                font-size: 1.3rem;
+            }
+
+            .trust-badges {
+                gap: 30px;
+                margin-top: 40px;
+            }
+
+            .trust-badge {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #ffeb3b;
+            border-top: 3px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-shapes" id="bgShapes"></div>
+
+    <main class="container">
+        <h1 class="headline">
+            Finally Revealed: How I <span class="highlight">"Shut Down"</span> the Inflammation That Was Sabotaging My Pancreas and Controlled My Blood Sugar in Just <span class="highlight">14 Days</span>
+        </h1>
+
+        <p class="subheadline">
+            Watch this short presentation and discover the natural method, ignored by Big Pharma, that attacks the root cause of uncontrolled blood sugar — without the dangerous side effects of traditional medications.
+        </p>
+
+        <div class="vsl-container">
+            <div class="vsl-video" id="vslVideo">
+                <div class="play-button" onclick="playVideo()"></div>
+                <div class="video-overlay">🔊 Turn on sound for the best experience</div>
+            </div>
+        </div>
+
+        <div class="urgency-timer">
+            ⏰ Limited Time Offer Ends In: <span class="timer-digits" id="countdown">23:45:12</span>
+        </div>
+
+        <button class="cta-button" onclick="scrollToBuy()">
+            YES! I WANT TO CONTROL MY BLOOD SUGAR NOW!
+        </button>
+
+        <p class="cta-subtext">
+            ✅ Visible Results in 14 Days • ✅ 100% Safe and Natural • ✅ 60-Day Guarantee
+        </p>
+
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <div class="trust-icon">✓</div>
+                100% Natural Ingredients
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">✓</div>
+                FDA Approved Facility
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">✓</div>
+                30,000+ Satisfied Customers
+            </div>
+            <div class="trust-badge">
+                <div class="trust-icon">✓</div>
+                Secure SSL Payment
+            </div>
+        </div>
+    </main>
+
+    <div class="notification" id="notification">
+        <div class="notification-avatar" id="avatar"></div>
+        <div class="notification-content">
+            <div class="notification-name" id="customerName"></div>
+            <div class="notification-action" id="customerAction"></div>
+            <div class="notification-time" id="customerTime"></div>
+        </div>
+    </div>
+
+    <script>
+        // Notification system
+        const notifications = [
+            {
+                name: "Sarah M.",
+                location: "New York",
+                action: "just purchased the 6-bottle package of SugarSync",
+                time: "2 minutes ago"
+            },
+            {
+                name: "Michael R.",
+                location: "California",
+                action: "just purchased the 3-bottle package of SugarSync",
+                time: "4 minutes ago"
+            },
+            {
+                name: "Jennifer L.",
+                location: "Texas",
+                action: "just purchased the 6-bottle package of SugarSync",
+                time: "7 minutes ago"
+            },
+            {
+                name: "David K.",
+                location: "Florida",
+                action: "just purchased 1 bottle of SugarSync",
+                time: "11 minutes ago"
+            },
+            {
+                name: "Lisa W.",
+                location: "Illinois",
+                action: "just purchased the 6-bottle package of SugarSync",
+                time: "14 minutes ago"
+            },
+            {
+                name: "Robert H.",
+                location: "Ohio",
+                action: "just purchased the 3-bottle package of SugarSync",
+                time: "17 minutes ago"
+            },
+            {
+                name: "Amanda S.",
+                location: "Georgia",
+                action: "just purchased the 6-bottle package of SugarSync",
+                time: "21 minutes ago"
+            },
+            {
+                name: "James T.",
+                location: "Michigan",
+                action: "just purchased 1 bottle of SugarSync",
+                time: "25 minutes ago"
+            }
+        ];
+
+        let currentNotificationIndex = 0;
+
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            const avatar = document.getElementById('avatar');
+            const customerName = document.getElementById('customerName');
+            const customerAction = document.getElementById('customerAction');
+            const customerTime = document.getElementById('customerTime');
+
+            const data = notifications[currentNotificationIndex];
+
+            avatar.textContent = data.name.charAt(0);
+            customerName.textContent = `${data.name} from ${data.location}`;
+            customerAction.textContent = data.action;
+            customerTime.textContent = data.time;
+
+            notification.classList.add('show');
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
+
+            currentNotificationIndex = (currentNotificationIndex + 1) % notifications.length;
+        }
+
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const endTime = new Date();
+            endTime.setHours(23, 59, 59, 999);
+
+            const timeLeft = endTime - now;
+
+            if (timeLeft > 0) {
+                const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').textContent =
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            } else {
+                document.getElementById('countdown').textContent = "00:00:00";
+            }
+        }
+
+        // Video play function
+        function playVideo() {
+            const vslVideo = document.getElementById('vslVideo');
+            vslVideo.innerHTML = `
+                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #000, #333); display: flex; align-items: center; justify-content: center; color: white; flex-direction: column; padding: 20px;">
+                    <div style="text-align: center;">
+                        <div class="loading-spinner"></div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.2rem;">🎬 Loading Your Personal Presentation...</h3>
+                        <p style="opacity: 0.8; font-size: 0.9rem;">Preparing your life-changing video</p>
+                    </div>
+                </div>
+            `;
+
+            console.log('VSL started - track this event');
+
+            setTimeout(() => {
+                vslVideo.innerHTML = `
+                    <div style="width: 100%; height: 100%; background: #000; display: flex; align-items: center; justify-content: center; color: white; flex-direction: column; padding: 20px;">
+                        <div style="text-align: center;">
+                            <h3 style="margin-bottom: 20px; color: #ffeb3b;">🎬 Your VSL Is Playing Now</h3>
+                            <p style="margin-bottom: 15px;">This is where your actual video would be playing</p>
+                            <div style="padding: 20px; background: rgba(255,235,59,0.1); border-radius: 10px; border: 1px solid rgba(255,235,59,0.3);">
+                                <p style="font-size: 0.9rem; line-height: 1.4;">Replace this placeholder with your VSL video embed code (YouTube, Vimeo, Wistia, etc.)</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }, 2000);
+        }
+
+        // Scroll to buy function
+        function scrollToBuy() {
+            if (navigator.vibrate) {
+                navigator.vibrate(50);
+            }
+
+            console.log('CTA clicked - track this conversion event');
+
+            alert("🚀 Redirecting to secure checkout page...\n\nThis would normally scroll to your order form or redirect to checkout!");
+        }
+
+        // Background shapes
+        function createBackgroundShapes() {
+            const shapesContainer = document.getElementById('bgShapes');
+            const shapes = ['circle', 'triangle', 'square'];
+
+            function addShape() {
+                const shape = document.createElement('div');
+                const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
+                const size = Math.random() * 30 + 10;
+
+                shape.className = `shape ${shapeType}`;
+
+                if (shapeType === 'circle' || shapeType === 'square') {
+                    shape.style.width = size + 'px';
+                    shape.style.height = size + 'px';
+                }
+
+                shape.style.left = Math.random() * 100 + '%';
+                shape.style.animationDuration = (Math.random() * 15 + 15) + 's';
+                shape.style.animationDelay = Math.random() * 5 + 's';
+
+                shapesContainer.appendChild(shape);
+
+                setTimeout(() => {
+                    if (shape.parentNode) {
+                        shape.parentNode.removeChild(shape);
+                    }
+                }, 25000);
+            }
+
+            setInterval(addShape, 3000);
+
+            for (let i = 0; i < 5; i++) {
+                setTimeout(addShape, i * 1000);
+            }
+        }
+
+        // Enhanced CTA button interactions
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const button = e.target;
+            const originalText = button.textContent;
+            button.style.background = 'linear-gradient(45deg, #4caf50, #8bc34a)';
+            button.textContent = 'PROCESSING...';
+
+            setTimeout(() => {
+                button.style.background = 'linear-gradient(45deg, #ff6b35, #f7931e)';
+                button.textContent = originalText;
+                scrollToBuy();
+            }, 1000);
+        });
+
+        // Touch optimizations for mobile
+        if ('ontouchstart' in window) {
+            document.body.style.webkitTapHighlightColor = 'rgba(255, 235, 59, 0.3)';
+
+            const buttons = document.querySelectorAll('.cta-button, .play-button');
+            buttons.forEach(button => {
+                button.addEventListener('touchstart', () => {
+                    button.style.transform = 'scale(0.98)';
+                }, { passive: true });
+
+                button.addEventListener('touchend', () => {
+                    button.style.transform = '';
+                }, { passive: true });
+            });
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            createBackgroundShapes();
+
+            setTimeout(() => {
+                showNotification();
+                setInterval(showNotification, 9000);
+            }, 4000);
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+        });
+
+        // Error handling
+        window.addEventListener('error', (e) => {
+            console.error('Page error:', e.error);
+        });
+
+        // Console messages
+        console.log('%c🚀 SugarSync VSL Landing Page', 'color: #ffeb3b; font-size: 20px; font-weight: bold;');
+        console.log('%c✨ Built with pure HTML, CSS and JavaScript', 'color: #4caf50; font-size: 12px;');
+    </script>
+</body>
+</html>
