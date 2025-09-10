@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SugarSync - Revolutionary Blood Sugar Solution</title>
-    <meta name="description" content="Discover the natural method ignored by Big Pharma that attacks the root cause of uncontrolled blood sugar in just 14 days.">
-    <link rel="canonical" href="https://sugarsync.com">
+    <title>Revolutionary Discovery for Blood Sugar Control - Health News</title>
+    <meta name="description" content="Harvard endocrinologist reveals 30-second trick that helps thousands lower blood sugar in just 14 days. Discover the breakthrough method now." />
+    <meta name="author" content="Health Editorial Team" />
+
+    <meta property="og:title" content="Revolutionary Discovery for Blood Sugar Control - Health News" />
+    <meta property="og:description" content="Harvard endocrinologist reveals 30-second trick that helps thousands lower blood sugar in just 14 days. Discover the breakthrough method now." />
+    <meta property="og:type" content="website" />
+
     <style>
         * {
             margin: 0;
@@ -13,490 +18,406 @@
             box-sizing: border-box;
         }
 
+        :root {
+            /* Health/Medical Landing Page Design System - Glucose Control Theme */
+            --background: hsl(0, 0%, 98%);
+            --foreground: hsl(215, 16%, 19%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(215, 16%, 19%);
+            --primary: hsl(142, 71%, 45%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --secondary: hsl(210, 40%, 96%);
+            --secondary-foreground: hsl(215, 25%, 27%);
+            --muted: hsl(210, 40%, 96%);
+            --muted-foreground: hsl(215, 16%, 47%);
+            --accent: hsl(213, 94%, 68%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            --destructive: hsl(0, 84%, 60%);
+            --destructive-foreground: hsl(0, 0%, 100%);
+            --warning: hsl(35, 91%, 62%);
+            --warning-foreground: hsl(0, 0%, 100%);
+            --success: hsl(142, 71%, 45%);
+            --success-foreground: hsl(0, 0%, 100%);
+            --border: hsl(214, 32%, 91%);
+            --input: hsl(214, 32%, 91%);
+            --ring: hsl(142, 71%, 45%);
+            --radius: 0.75rem;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-            background: #1a1a2e;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
         }
 
-        /* Dynamic Responsive Background */
-        .bg-gradient {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff6b6b 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            z-index: -3;
-        }
-
-        .bg-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 20% 80%, rgba(255, 107, 53, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(103, 126, 234, 0.2) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
-            z-index: -2;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Floating shapes */
-        .bg-shapes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .shape {
-            position: absolute;
-            opacity: 0.1;
-            animation: floatShape 20s linear infinite;
-        }
-
-        .shape.circle {
-            border-radius: 50%;
-            background: linear-gradient(45deg, #fff, rgba(255,255,255,0.5));
-        }
-
-        .shape.triangle {
-            width: 0;
-            height: 0;
-            background: none;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 25px solid rgba(255,255,255,0.15);
-        }
-
-        .shape.square {
-            background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-            transform: rotate(45deg);
-        }
-
-        @keyframes floatShape {
-            0% {
-                transform: translateY(100vh) translateX(0) rotate(0deg);
-                opacity: 0;
-            }
-            10% { opacity: 0.1; }
-            90% { opacity: 0.1; }
-            100% {
-                transform: translateY(-100px) translateX(50px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        .container {
-            max-width: 100%;
-            padding: 20px 15px;
+        /* Health Banner */
+        .health-banner {
+            background: linear-gradient(135deg, var(--destructive), hsl(15, 87%, 57%));
+            color: var(--destructive-foreground);
+            padding: 12px 0;
             text-align: center;
-            position: relative;
-            z-index: 1;
-            min-height: 100vh;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+        }
+
+        /* Viewer Counter */
+        .viewer-counter {
+            background-color: var(--card);
+            border-bottom: 1px solid var(--border);
+            padding: 12px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: 14px;
         }
 
-        /* Typography */
-        .headline {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #ffffff;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-            margin-bottom: 16px;
+            .viewer-counter span:first-child {
+                color: var(--muted-foreground);
+            }
+
+        .counter-badge {
+            background-color: var(--success);
+            color: var(--success-foreground);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 64rem;
+            margin: 0 auto;
+            background-color: var(--card);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Article Header */
+        .article-header {
+            padding: 20px 16px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .article-title {
+            font-size: clamp(20px, 5vw, 32px);
+            font-weight: 700;
             line-height: 1.2;
-            animation: slideInUp 0.8s ease-out;
-            padding: 0 10px;
+            margin-bottom: 16px;
+            color: var(--foreground);
         }
 
-        .headline .highlight {
-            color: #ffeb3b;
-            text-shadow: 2px 2px 8px rgba(255,235,59,0.4);
-            background: linear-gradient(45deg, #ffeb3b, #ffc107);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--muted-foreground);
         }
 
-        .subheadline {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 24px;
-            line-height: 1.5;
-            animation: slideInUp 0.8s ease-out 0.2s both;
-            padding: 0 10px;
-            max-width: 90%;
-            margin-left: auto;
-            margin-right: auto;
+            .article-meta span {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+
+        /* Article Content */
+        .article-content {
+            padding: 20px 16px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--foreground);
         }
 
-        /* VSL Container */
-        .vsl-container {
-            position: relative;
-            margin: 24px auto;
-            width: 100%;
-            max-width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            animation: slideInUp 0.8s ease-out 0.4s both;
-            background: #000;
-            border: 2px solid rgba(255,235,59,0.3);
+            .article-content > * {
+                margin-bottom: 20px;
+            }
+
+                .article-content > *:last-child {
+                    margin-bottom: 0;
+                }
+
+        /* VSL Section */
+        .vsl-section {
+            background-color: var(--card);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(142, 209, 155, 0.15);
+            padding: 16px;
+            margin: 0 0 20px 0;
         }
 
-        .vsl-video {
-            width: 100%;
+        .vsl-player {
             aspect-ratio: 16/9;
-            background: linear-gradient(45deg, #0f0f0f, #2a2a2a);
+            background-color: var(--muted);
+            border-radius: var(--radius);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1rem;
             position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            min-height: 200px;
         }
 
-        /* Play Button */
+            .vsl-player::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, var(--accent), var(--primary));
+                opacity: 0.1;
+            }
+
+        .vsl-content {
+            text-align: center;
+            z-index: 10;
+            padding: 20px;
+        }
+
         .play-button {
             width: 60px;
             height: 60px;
-            background: linear-gradient(45deg, #ffeb3b, #ffc107);
+            background-color: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: pulseGlow 3s infinite;
-            box-shadow: 0 0 0 0 rgba(255, 235, 59, 0.7);
-            position: relative;
-            z-index: 2;
+            margin: 0 auto 12px;
+            box-shadow: 0 4px 12px rgba(142, 209, 155, 0.15);
+            transition: transform 0.3s ease;
         }
 
-        .play-button::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: linear-gradient(45deg, #ffeb3b, #ffc107, #ff9800);
-            border-radius: 50%;
-            z-index: -1;
-            opacity: 0.7;
-            animation: spinGlow 4s linear infinite;
+            .play-button:hover {
+                transform: scale(1.1);
+            }
+
+        .play-icon {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-foreground);
+            margin-left: 2px;
         }
 
-        .play-button:hover {
-            transform: scale(1.2);
-            background: linear-gradient(45deg, #ffc107, #ff9800);
+        .vsl-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 6px;
         }
 
-        .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 16px solid #333;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            margin-left: 3px;
+        .vsl-duration {
+            font-size: 12px;
+            color: var(--muted-foreground);
         }
 
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(255, 235, 59, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 235, 59, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 235, 59, 0); }
+        /* Media Icons Section */
+        .media-icons {
+            margin-top: 20px;
+            padding: 16px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
         }
 
-        @keyframes spinGlow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .video-overlay {
-            position: absolute;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            backdrop-filter: blur(5px);
-        }
-
-        /* Urgency Timer */
-        .urgency-timer {
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            margin: 20px auto;
-            display: inline-block;
-            animation: slideInUp 0.8s ease-out 0.6s both;
-            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
-            border: 2px solid rgba(255,255,255,0.2);
-            font-size: 0.9rem;
-        }
-
-        .timer-digits {
-            font-size: 1.1rem;
-            color: #ffeb3b;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            font-weight: 900;
-        }
-
-        /* CTA Button */
-        .cta-button {
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 900;
+        .media-text {
+            font-size: 14px;
+            color: var(--muted-foreground);
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            padding: 18px 30px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            margin: 24px auto 0;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 6px 25px rgba(255, 107, 53, 0.4);
-            animation: slideInUp 0.8s ease-out 0.8s both;
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 350px;
-            border: 2px solid rgba(255,255,255,0.2);
-            display: block;
-            text-align: center;
-            text-decoration: none;
         }
 
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 35px rgba(255, 107, 53, 0.6);
-        }
-
-        .cta-subtext {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-top: 12px;
-            animation: slideInUp 0.8s ease-out 1s both;
-            line-height: 1.4;
-        }
-
-        /* Purchase Notifications */
-        .notification {
-            position: fixed;
-            bottom: 20px;
-            left: 15px;
-            right: 15px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 12px 16px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        .icons-container {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            transform: translateY(100px);
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1000;
-            border: 1px solid rgba(255,255,255,0.3);
-            opacity: 0;
-        }
-
-        .notification.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .notification-avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #4caf50, #8bc34a);
-            display: flex;
-            align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-            flex-shrink: 0;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
-        }
-
-        .notification-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .notification-name {
-            font-weight: bold;
-            color: #333;
-            font-size: 0.85rem;
-            margin-bottom: 2px;
-        }
-
-        .notification-action {
-            color: #666;
-            font-size: 0.75rem;
-            line-height: 1.2;
-        }
-
-        .notification-time {
-            color: #4caf50;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-top: 2px;
-        }
-
-        /* Trust Badges */
-        .trust-badges {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 24px;
-            animation: slideInUp 0.8s ease-out 1.2s both;
+            align-items: center;
             padding: 0 10px;
         }
 
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.8rem;
-            font-weight: 600;
-            padding: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2);
+        .media-logos-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 40px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
-        .trust-icon {
-            width: 16px;
-            height: 16px;
-            background: #4caf50;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            flex-shrink: 0;
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
+            .media-logos-img:hover {
                 opacity: 1;
-                transform: translateY(0);
             }
+
+        /* Fallback CSS logos (caso a imagem não carregue) */
+        .media-logos-fallback {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
         }
 
-        /* Responsive Design */
+        .media-icon {
+            height: 24px;
+            width: auto;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+            .media-icon:hover {
+                opacity: 1;
+            }
+
+        /* Comments Section */
+        .comments-section {
+            background-color: hsla(210, 40%, 96%, 0.5);
+            padding: 20px 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .comments-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--foreground);
+        }
+
+        .comment {
+            background-color: var(--card);
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .comment-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .author-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 12px;
+            flex-shrink: 0;
+            overflow: hidden;
+            border: 2px solid var(--border);
+        }
+
+            .author-avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--accent);
+            font-size: 14px;
+        }
+
+        .comment-text {
+            color: var(--foreground);
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .comment-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 12px;
+            color: var(--muted-foreground);
+            flex-wrap: wrap;
+        }
+
+        .like-btn {
+            color: var(--accent);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+            font-size: inherit;
+        }
+
+            .like-btn:hover {
+                color: var(--destructive);
+            }
+
+            .like-btn.liked {
+                color: var(--destructive);
+            }
+
+        .like-count {
+            background-color: hsla(213, 94%, 68%, 0.1);
+            color: var(--accent);
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 11px;
+        }
+
+        .comments-closed {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--muted);
+            border-radius: var(--radius);
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+            .comments-closed strong {
+                color: var(--foreground);
+            }
+
+        /* Desktop Styles */
         @media (min-width: 768px) {
-            .container {
-                padding: 30px 40px;
-                max-width: 800px;
-                margin: 0 auto;
+            .health-banner {
+                font-size: 18px;
+                padding: 16px 0;
+                letter-spacing: 2px;
             }
 
-            .headline {
-                font-size: 2.4rem;
+            .viewer-counter {
+                padding: 16px;
+                font-size: 16px;
             }
 
-            .subheadline {
-                font-size: 1.2rem;
-                max-width: 100%;
+            .article-header {
+                padding: 32px;
             }
 
-            .vsl-container {
-                max-width: 600px;
-                margin: 40px auto;
+            .article-content {
+                padding: 32px;
+                font-size: 18px;
             }
 
-            .play-button {
-                width: 70px;
-                height: 70px;
+            .vsl-section {
+                padding: 24px;
             }
 
-            .cta-button {
-                font-size: 1.2rem;
-                padding: 20px 40px;
-                max-width: 400px;
-            }
-
-            .trust-badges {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 16px;
-            }
-
-            .notification {
-                left: 30px;
-                right: auto;
-                max-width: 320px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                max-width: 900px;
-                padding: 40px 50px;
-            }
-
-            .headline {
-                font-size: 3.2rem;
-                margin-bottom: 24px;
-            }
-
-            .subheadline {
-                font-size: 1.3rem;
-                margin-bottom: 40px;
-            }
-
-            .vsl-container {
-                max-width: 720px;
-                margin: 50px auto;
-                border-radius: 20px;
+            .vsl-player {
+                min-height: 300px;
             }
 
             .play-button {
@@ -504,356 +425,297 @@
                 height: 80px;
             }
 
-            .play-button::after {
-                border-left: 20px solid #333;
-                border-top: 12px solid transparent;
-                border-bottom: 12px solid transparent;
-                margin-left: 4px;
+            .play-icon {
+                width: 32px;
+                height: 32px;
             }
 
-            .cta-button {
-                font-size: 1.3rem;
-                padding: 22px 50px;
-                max-width: 500px;
+            .vsl-title {
+                font-size: 18px;
             }
 
-            .urgency-timer {
-                font-size: 1rem;
-                padding: 16px 30px;
+            .vsl-duration {
+                font-size: 14px;
             }
 
-            .timer-digits {
-                font-size: 1.3rem;
+            .media-icons {
+                padding: 24px 0;
             }
 
-            .trust-badges {
-                gap: 30px;
-                margin-top: 40px;
+            .media-text {
+                font-size: 16px;
             }
 
-            .trust-badge {
-                font-size: 0.9rem;
-                padding: 12px 16px;
+            .icons-container {
+                gap: 20px;
             }
-        }
 
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+            .media-icon {
+                height: 32px;
             }
-        }
 
-        .loading-spinner {
-            width: 60px;
-            height: 60px;
-            border: 3px solid #ffeb3b;
-            border-top: 3px solid transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
+            .media-logos-img {
+                max-height: 50px;
+            }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            .comments-section {
+                padding: 32px;
+            }
+
+            .comments-header {
+                font-size: 20px;
+            }
+
+            .comment-text {
+                font-size: 16px;
+            }
+
+            .comment-meta {
+                font-size: 13px;
+            }
+
+            .comments-closed {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="bg-gradient"></div>
-    <div class="bg-overlay"></div>
-    <div class="bg-shapes" id="bgShapes"></div>
+    <!-- Health Banner -->
+    <div class="health-banner">
+        HEALTH NEWS
+    </div>
 
-    <main class="container">
-        <h1 class="headline">
-            Finally Revealed: How I <span class="highlight">"Shut Down"</span> the Inflammation That Was Sabotaging My Pancreas and Controlled My Blood Sugar in Just <span class="highlight">14 Days</span>
-        </h1>
+    <!-- Viewer Counter -->
+    <div class="viewer-counter">
+        <span>👁️ Active readers now:</span>
+        <span class="counter-badge" id="viewerCount">3,247</span>
+    </div>
 
-        <p class="subheadline">
-            Watch this short presentation and discover the natural method, ignored by Big Pharma, that attacks the root cause of uncontrolled blood sugar — without the dangerous side effects of traditional medications.
-        </p>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Article -->
+        <article>
+            <!-- Article Header -->
+            <header class="article-header">
+                <h1 class="article-title">
+                    Harvard Endocrinologist Reveals: "30-Second Trick That's Helping Thousands Lower Blood Sugar in Just 14 Days"
+                </h1>
+                <div class="article-meta">
+                    <span>📅 Published today</span>
+                    <span>✏️ By Dr. Sanjay Gupta</span>
+                    <span>⏱️ 4 min read</span>
+                </div>
+            </header>
 
-        <div class="vsl-container">
-            <div class="vsl-video" id="vslVideo">
-                <div class="play-button" onclick="playVideo()"></div>
-                <div class="video-overlay">🔊 Turn on sound for the best experience</div>
+            <!-- Article Content -->
+            <div class="article-content">
+                <!-- VSL Section -->
+                <div class="vsl-section">
+                    <div class="vsl-player" onclick="playVideo()">
+                        <div class="vsl-content">
+                            <div class="play-button">
+                                <svg class="play-icon" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                            <p class="vsl-title">Click to Watch Full Presentation</p>
+                            <p class="vsl-duration">Duration: 12:34 minutes</p>
+                        </div>
+                    </div>
+
+                    <!-- Media Icons Section -->
+                    <div class="media-icons">
+                        <div class="media-text">As seen on:</div>
+                        <div class="icons-container">
+                            <!-- Substitua o src abaixo pela sua imagem dos logos -->
+                            <img src="img/b3cbd72.png" alt="Media Logos" class="media-logos-img" onerror="this.style.display='none'; document.querySelector('.media-logos-fallback').style.display='flex';">
+
+                            <!-- Fallback CSS logos caso a imagem não carregue -->
+                            <div class="media-logos-fallback">
+                                <svg class="media-icon" viewBox="0 0 120 40" fill="none">
+                                    <text x="10" y="25" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#333">The New York Times</text>
+                                </svg>
+                                <svg class="media-icon" viewBox="0 0 80 40" fill="none">
+                                    <circle cx="20" cy="20" r="18" fill="#0066CC" />
+                                    <text x="20" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">CBS</text>
+                                </svg>
+                                <svg class="media-icon" viewBox="0 0 80 40" fill="none">
+                                    <circle cx="20" cy="20" r="18" fill="#0066CC" />
+                                    <text x="20" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">abc</text>
+                                </svg>
+                                <svg class="media-icon" viewBox="0 0 80 40" fill="none">
+                                    <rect x="2" y="8" width="36" height="24" fill="#003366" />
+                                    <text x="20" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">FOX</text>
+                                </svg>
+                                <svg class="media-icon" viewBox="0 0 80 40" fill="none">
+                                    <rect x="2" y="8" width="36" height="24" rx="4" fill="#CC0000" />
+                                    <text x="20" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">CNN</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </article>
 
-        <div class="urgency-timer">
-            ⏰ Limited Time Offer Ends In: <span class="timer-digits" id="countdown">23:45:12</span>
-        </div>
+        <!-- Comments Section -->
+        <div class="comments-section">
+            <h3 class="comments-header">Showing 18 of 847 comments</h3>
 
-        <button class="cta-button" onclick="scrollToBuy()">
-            YES! I WANT TO CONTROL MY BLOOD SUGAR NOW!
-        </button>
-
-        <p class="cta-subtext">
-            ✅ Visible Results in 14 Days • ✅ 100% Safe and Natural • ✅ 60-Day Guarantee
-        </p>
-
-        <div class="trust-badges">
-            <div class="trust-badge">
-                <div class="trust-icon">✓</div>
-                100% Natural Ingredients
+            <div id="commentsContainer">
+                <!-- Comments will be generated by JavaScript -->
             </div>
-            <div class="trust-badge">
-                <div class="trust-icon">✓</div>
-                FDA Approved Facility
-            </div>
-            <div class="trust-badge">
-                <div class="trust-icon">✓</div>
-                30,000+ Satisfied Customers
-            </div>
-            <div class="trust-badge">
-                <div class="trust-icon">✓</div>
-                Secure SSL Payment
-            </div>
-        </div>
-    </main>
 
-    <div class="notification" id="notification">
-        <div class="notification-avatar" id="avatar"></div>
-        <div class="notification-content">
-            <div class="notification-name" id="customerName"></div>
-            <div class="notification-action" id="customerAction"></div>
-            <div class="notification-time" id="customerTime"></div>
+            <div class="comments-closed">
+                <strong>This post is no longer accepting comments!</strong>
+            </div>
         </div>
     </div>
 
     <script>
-        // Notification system
-        const notifications = [
+        // Viewer counter animation
+        let viewerCount = 3247;
+
+        function updateViewerCount() {
+            const variation = Math.floor(Math.random() * 50) - 25;
+            viewerCount = Math.max(3200, Math.min(3300, viewerCount + variation));
+            document.getElementById('viewerCount').textContent = viewerCount.toLocaleString();
+        }
+
+        setInterval(updateViewerCount, 3000);
+
+        // Função para gerar foto aleatória de homem/mulher
+        function getRandomPersonPhoto(gender = "female") {
+            // pode ser "female" ou "male"
+            return `https://api.generated.photos/api/v1/faces?api_key=SUA_API_KEY&gender=${gender}&order_by=random`;
+        }
+
+        // Comments data and functionality
+        const commentsData = [
             {
-                name: "Sarah M.",
-                location: "New York",
-                action: "just purchased the 6-bottle package of SugarSync",
-                time: "2 minutes ago"
+                id: 1,
+                author: "Jennifer Williams",
+                initials: "JW",
+                photo: "./img/female1.jpg",
+                text: "I'm so happy I watched until the end. Super happy!!! Thank you Dr. Chen. As I got older, my blood sugar kept rising and my doctor was talking about insulin injections. But after trying this method, my glucose levels are now normal, and my energy is better than when I was 30! God bless you!",
+                likes: 24,
+                time: "3 m"
             },
             {
-                name: "Michael R.",
-                location: "California",
-                action: "just purchased the 3-bottle package of SugarSync",
-                time: "4 minutes ago"
+                id: 2,
+                author: "Mark Thompson",
+                initials: "MT",
+                photo: "./img/male1.jpg",
+                text: "At first I didn't believe it, but after I tried it, I saw it really works. My morning blood sugar went from 180 to 105 in two weeks. Dr. Chen you are amazing!!",
+                likes: 18,
+                time: "7 m"
             },
             {
-                name: "Jennifer L.",
-                location: "Texas",
-                action: "just purchased the 6-bottle package of SugarSync",
-                time: "7 minutes ago"
+                id: 3,
+                author: "Lisa Rodriguez",
+                initials: "LR",
+                photo: "./img/female2.jpg",
+                text: "My husband has had diabetes for over 8 years. And this simple trick made him recover like never before. His A1C dropped from 9.2 to 6.8! Thank you so much!",
+                likes: 31,
+                time: "12 m"
             },
             {
-                name: "David K.",
-                location: "Florida",
-                action: "just purchased 1 bottle of SugarSync",
-                time: "11 minutes ago"
+                id: 4,
+                author: "David Park",
+                initials: "DP",
+                photo: "./img/male2.jpg",
+                text: "Thank you Dr. Chen for changing my life in just two weeks. I am so grateful for what you've done, it seems like a miracle. I get emotional just thinking about how it really worked!",
+                likes: 15,
+                time: "18 m"
             },
             {
-                name: "Lisa W.",
-                location: "Illinois",
-                action: "just purchased the 6-bottle package of SugarSync",
-                time: "14 minutes ago"
+                id: 5,
+                author: "Maria Santos",
+                initials: "MS",
+                photo: "./img/female3.jpg",
+                text: "I always thought these things about controlling blood sugar naturally were nonsense, but I had to eat my words. If I had known about this before, I would have tried it much sooner!",
+                likes: 22,
+                time: "25 m"
             },
             {
-                name: "Robert H.",
-                location: "Ohio",
-                action: "just purchased the 3-bottle package of SugarSync",
-                time: "17 minutes ago"
-            },
-            {
-                name: "Amanda S.",
-                location: "Georgia",
-                action: "just purchased the 6-bottle package of SugarSync",
-                time: "21 minutes ago"
-            },
-            {
-                name: "James T.",
-                location: "Michigan",
-                action: "just purchased 1 bottle of SugarSync",
-                time: "25 minutes ago"
+                id: 6,
+                author: "Robert Kim",
+                initials: "RK",
+                photo: "./img/male3.jpg",
+                text: "I thought it was a scam, but it really made my blood sugar super stable? Unbelievable, thank you Jesus!!!",
+                likes: 19,
+                time: "41 m"
             }
         ];
 
-        let currentNotificationIndex = 0;
+        let likedComments = new Set();
 
-        function showNotification() {
-            const notification = document.getElementById('notification');
-            const avatar = document.getElementById('avatar');
-            const customerName = document.getElementById('customerName');
-            const customerAction = document.getElementById('customerAction');
-            const customerTime = document.getElementById('customerTime');
+        function toggleLike(commentId) {
+            const likeBtn = document.querySelector(`[data-comment-id="${commentId}"] .like-btn`);
+            const likeCount = document.querySelector(`[data-comment-id="${commentId}"] .like-count`);
+            const comment = commentsData.find(c => c.id === commentId);
 
-            const data = notifications[currentNotificationIndex];
-
-            avatar.textContent = data.name.charAt(0);
-            customerName.textContent = `${data.name} from ${data.location}`;
-            customerAction.textContent = data.action;
-            customerTime.textContent = data.time;
-
-            notification.classList.add('show');
-
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 5000);
-
-            currentNotificationIndex = (currentNotificationIndex + 1) % notifications.length;
-        }
-
-        // Countdown timer
-        function updateCountdown() {
-            const now = new Date();
-            const endTime = new Date();
-            endTime.setHours(23, 59, 59, 999);
-
-            const timeLeft = endTime - now;
-
-            if (timeLeft > 0) {
-                const hours = Math.floor(timeLeft / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                document.getElementById('countdown').textContent =
-                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            if (likedComments.has(commentId)) {
+                likedComments.delete(commentId);
+                likeBtn.textContent = 'Like · Reply';
+                likeBtn.classList.remove('liked');
+                likeCount.textContent = `👍 ${comment.likes}`;
             } else {
-                document.getElementById('countdown').textContent = "00:00:00";
+                likedComments.add(commentId);
+                likeBtn.textContent = 'Liked · Reply';
+                likeBtn.classList.add('liked');
+                likeCount.textContent = `👍 ${comment.likes + 1}`;
             }
         }
 
-        // Video play function
-        function playVideo() {
-            const vslVideo = document.getElementById('vslVideo');
-            vslVideo.innerHTML = `
-                <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #000, #333); display: flex; align-items: center; justify-content: center; color: white; flex-direction: column; padding: 20px;">
-                    <div style="text-align: center;">
-                        <div class="loading-spinner"></div>
-                        <h3 style="margin-bottom: 15px; font-size: 1.2rem;">🎬 Loading Your Personal Presentation...</h3>
-                        <p style="opacity: 0.8; font-size: 0.9rem;">Preparing your life-changing video</p>
-                    </div>
-                </div>
-            `;
+        function renderComments() {
+            const container = document.getElementById('commentsContainer');
 
-            console.log('VSL started - track this event');
-
-            setTimeout(() => {
-                vslVideo.innerHTML = `
-                    <div style="width: 100%; height: 100%; background: #000; display: flex; align-items: center; justify-content: center; color: white; flex-direction: column; padding: 20px;">
-                        <div style="text-align: center;">
-                            <h3 style="margin-bottom: 20px; color: #ffeb3b;">🎬 Your VSL Is Playing Now</h3>
-                            <p style="margin-bottom: 15px;">This is where your actual video would be playing</p>
-                            <div style="padding: 20px; background: rgba(255,235,59,0.1); border-radius: 10px; border: 1px solid rgba(255,235,59,0.3);">
-                                <p style="font-size: 0.9rem; line-height: 1.4;">Replace this placeholder with your VSL video embed code (YouTube, Vimeo, Wistia, etc.)</p>
+            container.innerHTML = commentsData.map(comment => `
+                    <div class="comment" data-comment-id="${comment.id}">
+                        <div class="comment-author">
+                            <div class="author-avatar">
+                                <img src="${comment.photo}" alt="${comment.author}" onerror="this.style.display='none'; this.parentElement.innerHTML='${comment.initials}';">
                             </div>
+                            <span class="author-name">${comment.author}</span>
+                        </div>
+                        <div class="comment-text">${comment.text}</div>
+                        <div class="comment-meta">
+                            <button class="like-btn" onclick="toggleLike(${comment.id})">Like · Reply</button>
+                            <span class="like-count">👍 ${comment.likes}</span>
+                            <span>· ${comment.time}</span>
                         </div>
                     </div>
-                `;
-            }, 2000);
+                `).join('');
         }
 
-        // Scroll to buy function
-        function scrollToBuy() {
-            if (navigator.vibrate) {
-                navigator.vibrate(50);
-            }
-
-            console.log('CTA clicked - track this conversion event');
-
-            alert("🚀 Redirecting to secure checkout page...\n\nThis would normally scroll to your order form or redirect to checkout!");
-        }
-
-        // Background shapes
-        function createBackgroundShapes() {
-            const shapesContainer = document.getElementById('bgShapes');
-            const shapes = ['circle', 'triangle', 'square'];
-
-            function addShape() {
-                const shape = document.createElement('div');
-                const shapeType = shapes[Math.floor(Math.random() * shapes.length)];
-                const size = Math.random() * 30 + 10;
-
-                shape.className = `shape ${shapeType}`;
-
-                if (shapeType === 'circle' || shapeType === 'square') {
-                    shape.style.width = size + 'px';
-                    shape.style.height = size + 'px';
-                }
-
-                shape.style.left = Math.random() * 100 + '%';
-                shape.style.animationDuration = (Math.random() * 15 + 15) + 's';
-                shape.style.animationDelay = Math.random() * 5 + 's';
-
-                shapesContainer.appendChild(shape);
-
-                setTimeout(() => {
-                    if (shape.parentNode) {
-                        shape.parentNode.removeChild(shape);
-                    }
-                }, 25000);
-            }
-
-            setInterval(addShape, 3000);
-
-            for (let i = 0; i < 5; i++) {
-                setTimeout(addShape, i * 1000);
-            }
-        }
-
-        // Enhanced CTA button interactions
-        document.querySelector('.cta-button').addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const button = e.target;
-            const originalText = button.textContent;
-            button.style.background = 'linear-gradient(45deg, #4caf50, #8bc34a)';
-            button.textContent = 'PROCESSING...';
-
-            setTimeout(() => {
-                button.style.background = 'linear-gradient(45deg, #ff6b35, #f7931e)';
-                button.textContent = originalText;
-                scrollToBuy();
-            }, 1000);
-        });
-
-        // Touch optimizations for mobile
-        if ('ontouchstart' in window) {
-            document.body.style.webkitTapHighlightColor = 'rgba(255, 235, 59, 0.3)';
-
-            const buttons = document.querySelectorAll('.cta-button, .play-button');
-            buttons.forEach(button => {
-                button.addEventListener('touchstart', () => {
-                    button.style.transform = 'scale(0.98)';
-                }, { passive: true });
-
-                button.addEventListener('touchend', () => {
-                    button.style.transform = '';
-                }, { passive: true });
+        // Função para recarregar fotos dos comentários
+        function refreshCommentPhotos() {
+            commentsData.forEach(comment => {
+                comment.photo = getRandomPersonPhoto();
             });
+            renderComments();
         }
 
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            createBackgroundShapes();
+        function playVideo() {
+            // Placeholder for video functionality
+            alert('Video would play here in a real implementation');
+        }
 
-            setTimeout(() => {
-                showNotification();
-                setInterval(showNotification, 9000);
-            }, 4000);
-
-            setInterval(updateCountdown, 1000);
-            updateCountdown();
+        // Initialize comments on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            renderComments();
         });
 
-        // Error handling
-        window.addEventListener('error', (e) => {
-            console.error('Page error:', e.error);
+        // Refresh photos on page reload/F5
+        window.addEventListener('beforeunload', function () {
+            refreshCommentPhotos();
         });
 
-        // Console messages
-        console.log('%c🚀 SugarSync VSL Landing Page', 'color: #ffeb3b; font-size: 20px; font-weight: bold;');
-        console.log('%c✨ Built with pure HTML, CSS and JavaScript', 'color: #4caf50; font-size: 12px;');
+        // Optional: Refresh photos every 30 seconds for demo purposes
+        // setInterval(refreshCommentPhotos, 30000);
     </script>
 </body>
 </html>
